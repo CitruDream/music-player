@@ -200,4 +200,24 @@ div {
         background-color: rgba(0, 0, 0, 0.2);
         border-radius: 2px;
     }
+
+    .bg {
+        overflow-y: auto;
+        height: 100vh;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .zone.top {
+        flex-direction: column;
+        overflow-y: auto;
+        height: calc(100vh - 100px);
+    }
+
+    .box.cover,
+    .box.mainBox,
+    .box.listBox {
+        width: 100%;
+        flex-shrink: 0;
+    }
 }
