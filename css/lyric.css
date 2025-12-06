@@ -22,18 +22,18 @@ audio {
     position: relative;
 }
 
-.lyricsBox>div {
+.lyricsBox > div {
     width: 100%;
     height: 100%;
     padding: 0 1%;
-    mask-image: linear-gradient(to bottom,transparent,black 15%,black 85%,transparent);
+    mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
     overflow: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
 
-.lyricsBox>div::-webkit-scrollbar {
-    display: none; 
+.lyricsBox > div::-webkit-scrollbar {
+    display: none;
 }
 
 .lyricsBox p {
@@ -74,7 +74,7 @@ audio {
 }
 
 .lyricsBox .beforeBlank {
-    height: 30%; 
+    height: 30%;
 }
 
 .lyricsBox .afterBlank {
@@ -91,7 +91,7 @@ audio {
     }
 }
 
-.lyrics>.active {
+.lyrics > .active {
     font-size: 22px;
     animation: rainbow 3.5s linear infinite;
 }
@@ -105,7 +105,7 @@ audio {
     gap: 10%;
 }
 
-.buttonBox>div {
+.buttonBox > div {
     height: 100%;
     aspect-ratio: 1/1;
     position: relative;

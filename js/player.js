@@ -6,7 +6,7 @@ const coverImg = document.querySelector('.coverImg').firstElementChild;
 const coverText = document.querySelector('.cover').children[1];
 const search = document.querySelector('.search>input');
 const songList = document.querySelector('.list');
-let listPlayIcon=[];
+let listPlayIcon = [];
 const colorChoose = document.querySelector('.colorChoose');
 
 const centerTime = document.querySelector('.time');
@@ -138,12 +138,12 @@ function locateCurrentLyric() {
                     block: 'center'
                 });
             }
-        }
-        else {
+        } else {
             p.className = '';
         }
     }
 }
+
 audio.addEventListener('timeupdate', locateCurrentLyric);
 
 //点击歌词跳转
@@ -158,8 +158,7 @@ lyricsList.addEventListener('click', (e) => {
 playIcon.parentNode.addEventListener('click', () => {
     if (isPlaying) {
         audio.pause();
-    }
-    else {
+    } else {
         audio.play();
     }
 });
@@ -200,6 +199,7 @@ function chooseColor(op) {
     nowColor = op;
     locateCurrentLyric();
 }
+
 colorChoose.addEventListener('click', (e) => {
     if (e.target.parentNode.className.indexOf('color ') != -1) {
         chooseColor(e.target.parentNode.className.split(' ')[1]);
@@ -230,6 +230,7 @@ function setPlaybackMode() {
         modeIcons[0].classList.remove('none');
     }
 }
+
 modeIcons[0].parentNode.addEventListener('click', () => {
     playbackMode = (playbackMode + 1) % 3;
     setPlaybackMode();
@@ -248,11 +249,9 @@ function chooseRandomSong() {
 audio.addEventListener('ended', () => {
     if (playbackMode == 0) {
         chooseSong((songIndex + 1) % songQuantity);
-    }
-    else if (playbackMode == 1) {
+    } else if (playbackMode == 1) {
         chooseRandomSong();
-    }
-    else {
+    } else {
         chooseSong(songIndex);
     }
 });
@@ -275,11 +274,9 @@ function setSongList() {
             }
             if (e.target.tagName == 'DIV') {
                 e = e.target;
-            }
-            else if (e.target.tagName == 'SPAN') {
+            } else if (e.target.tagName == 'SPAN') {
                 e = e.target.parentNode.parentNode;
-            }
-            else {
+            } else {
                 e = e.target.parentNode;
             }
             chooseSong(e.getAttribute('data-index'));
@@ -294,8 +291,7 @@ search.addEventListener('input', () => {
         const p = songList.children[i].children[1];
         if (p.innerHTML.indexOf(search.value) != -1) {
             songList.children[i].classList.remove('none');
-        }
-        else {
+        } else {
             songList.children[i].classList.add('none');
         }
     }
@@ -321,24 +317,22 @@ document.querySelector('.fa-forward-step').addEventListener('click', () => {
 function setLoved() {
     if (isLoved[songIndex]) {
         loveIcon.className = 'fa-solid fa-heart fa-lg';
-    }
-    else {
+    } else {
         loveIcon.className = 'fa-regular fa-heart fa-lg';
     }
 }
+
 loveIcon.parentNode.addEventListener('click', () => {
     if (isLoved[songIndex]) {
         isLoved[songIndex] = false;
-    }
-    else {
+    } else {
         isLoved[songIndex] = true;
     }
     setLoved();
     for (let i = 0; i < songQuantity; i++) {
         if (isLoved[i]) {
             songList.children[i].children[2].className = 'fa-solid fa-heart fa-lg';
-        }
-        else {
+        } else {
             songList.children[i].children[2].className = 'fa-regular fa-heart fa-lg';
         }
     }
@@ -349,8 +343,7 @@ songList.addEventListener('click', (e) => {
             if (e.target.className.indexOf('fa-solid') != -1) {
                 e.target.className = 'fa-regular fa-heart fa-lg';
                 isLoved[e.target.parentNode.getAttribute('data-index')] = false;
-            }
-            else {
+            } else {
                 e.target.className = 'fa-solid fa-heart fa-lg';
                 isLoved[e.target.parentNode.getAttribute('data-index')] = true;
             }

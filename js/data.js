@@ -659,8 +659,7 @@ translation.forEach((item, index) => {
         for (let i = 0; i < transArr.length; i++) {
             if (i < foreign[index]) {
                 translation[index].push(transArr[i]);
-            }
-            else {
+            } else {
                 translation[index].push(transArr[i] + '<br>' + transArr[i + 1]);
                 i++;
             }
@@ -683,8 +682,7 @@ function handleLrc(lrc, index) {
             let content;
             if (foreign[index] == 0) {
                 content = lrc[i].replace(regex, '');
-            }
-            else {
+            } else {
                 content = translation[index][i];
             }
             if (content != '') {
@@ -693,8 +691,7 @@ function handleLrc(lrc, index) {
                 let timeText;
                 if (sec < 10) {
                     timeText = min + ':0' + sec;
-                }
-                else {
+                } else {
                     timeText = min + ':' + sec;
                 }
                 if (min < 10) {
@@ -705,8 +702,9 @@ function handleLrc(lrc, index) {
         }
     }
     time.push(1e9);
-    return { time, lyrics, showTime, size: time.length - 2 };
+    return {time, lyrics, showTime, size: time.length - 2};
 }
+
 lrc.forEach((item, index) => {
     let result = handleLrc(item, index);
     time.push(result.time);

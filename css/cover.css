@@ -1,9 +1,9 @@
 .cover {
-   display: flex; 
-   flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
-.cover>.coverImg {
+.cover > .coverImg {
     width: 98%;
     aspect-ratio: 1/1;
     position: relative;
@@ -14,21 +14,21 @@
     align-items: center;
 }
 
-.cover>.coverImg>img.paused {
+.cover > .coverImg > img.paused {
     animation-play-state: paused;
 }
 
-.cover>.coverImg>img {
+.cover > .coverImg > img {
     width: 90%;
     aspect-ratio: 1/1;
     object-fit: cover;
     border-radius: 50%;
     -webkit-mask: radial-gradient(circle,
-            transparent 22%,
-            black 22%);
+    transparent 22%,
+    black 22%);
     mask: radial-gradient(circle,
-            transparent 22%,
-            black 22%);
+    transparent 22%,
+    black 22%);
     animation: rotate 10s linear infinite;
 }
 
@@ -41,7 +41,7 @@
     }
 }
 
-.cover>.text {
+.cover > .text {
     position: relative;
     top: -10px;
     flex: 1;
@@ -51,6 +51,6 @@
     align-items: center;
 }
 
-.cover>.text>:first-child {
+.cover > .text > :first-child {
     font-size: 1.5rem;
 }

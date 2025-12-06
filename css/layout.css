@@ -13,7 +13,7 @@ div {
 }
 
 .none {
-    display: none !important; 
+    display: none !important;
 }
 
 .bg {
@@ -112,6 +112,7 @@ div {
         width: 100%;
         flex-direction: column;
     }
+
     .bottom {
         flex-direction: row !important; /* 关键：底部改为水平布局 */
         justify-content: space-between;
@@ -141,6 +142,7 @@ div {
         margin-top: 20px;
         order: 1; /* 控制显示顺序 */
     }
+
     .mainBox {
         border-radius: 20px;
         order: 2;
@@ -149,6 +151,7 @@ div {
         overflow-y: auto; /* 启用垂直滚动 */
         -webkit-overflow-scrolling: touch;
     }
+
     .listBox {
         height: auto;
         min-height: 200px;
@@ -157,6 +160,7 @@ div {
         width: 55% !important; /* 底部左侧宽度 */
         margin: 0 !important; /* 在.bottom中覆盖上边距 */
     }
+
     .colorChoose {
         order: 4;
         width: 40% !important; /* 底部右侧宽度 */
@@ -191,6 +195,7 @@ div {
     .mainBox::-webkit-scrollbar {
         width: 4px;
     }
+
     .mainBox::-webkit-scrollbar-thumb {
         background-color: rgba(0, 0, 0, 0.2);
         border-radius: 2px;
