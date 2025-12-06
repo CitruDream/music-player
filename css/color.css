@@ -133,3 +133,71 @@
     background-size: 200% auto;
     background-clip: text;
 }
+
+@media (max-width: 768px) {
+    .colorChoose {
+        flex-direction: column; /* 主轴变为垂直 */
+        justify-content: flex-start; /* 从顶部开始排列 */
+        align-items: center; /* 内容居中对齐 */
+        padding: 10px 5px !important; /* 调整内边距 */
+        gap: 15px; /* 设置内部元素间距 */
+    }
+
+    /* 隐藏原来的“颜色”文字标签（因为图标本身已能表达） */
+    .colorChoose > .text {
+        display: none;
+    }
+
+    /* 让.color容器（包含所有色块）充满宽度并垂直排列 */
+    .colorChoose > .color {
+        width: 100%;
+        flex-direction: column; /* 色块垂直排列 */
+        gap: 12px; /* 色块间距 */
+        justify-content: flex-start;
+    }
+
+    /* 调整每个色块的尺寸 */
+    .colorChoose > .color > div {
+        width: 60% !important; /* 色块宽度相对容器 */
+        max-width: 50px; /* 但不超过50px，防止过大 */
+        aspect-ratio: 1/1;
+    }
+}
+@media (max-width: 768px) {
+    /* 强制.colorChoose容器使用精确尺寸 */
+    .colorChoose {
+        width: 35% !important; /* 进一步缩窄宽度 */
+        max-width: 120px !important; /* 绝对最大宽度限制 */
+        min-width: 80px !important; /* 保持可操作性 */
+        height: auto !important;
+        padding: 8px 5px !important;
+        margin: 0 5px 0 10px !important; /* 控制与左侧间距 */
+        /* 确保布局稳定 */
+        display: flex !important;
+        flex-shrink: 0 !important; /* 禁止被挤压 */
+        position: relative !important;
+        top: 0 !important;
+        left: 0 !important;
+        align-self: center; /* 垂直居中于.bottom */
+    }
+
+    /* 重点：约束内部圆角矩形背景框 */
+    .colorChoose > .color {
+        width: 100% !important; /* 色块容器充满父级 */
+        background-color: rgba(255, 255, 255, 0.2); /* 可视化的背景框 */
+        border-radius: 15px; /* 圆角矩形 */
+        padding: 10px 5px;
+        box-sizing: border-box;
+        /* 确保内部垂直布局 */
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* 缩窄每个色块 */
+    .colorChoose > .color > div {
+        width: 70% !important; /* 相对于容器宽度 */
+        max-width: 40px !important; /* 绝对最大宽度 */
+        aspect-ratio: 1/1;
+    }
+}
