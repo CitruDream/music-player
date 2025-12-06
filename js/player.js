@@ -361,3 +361,24 @@ window.onload = () => {
     chooseColor('blue');
     iscanplay = true;
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    const hamburger = document.querySelector('.hamburger-menu');
+    const colorChoose = document.querySelector('.colorChoose');
+
+    if (hamburger && colorChoose) {
+        hamburger.addEventListener('click', function () {
+            colorChoose.classList.toggle('show');
+            colorChoose.classList.remove('hidden');
+        });
+
+        // 点击其他地方关闭菜单
+        document.addEventListener('click', function (event) {
+            if (!hamburger.contains(event.target) &&
+                !colorChoose.contains(event.target) &&
+                colorChoose.classList.contains('show')) {
+                colorChoose.classList.remove('show');
+            }
+        });
+    }
+});

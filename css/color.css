@@ -202,3 +202,72 @@
         aspect-ratio: 1/1;
     }
 }
+
+.hamburger-menu {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 8px 12px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.menu-text {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.hamburger-menu i {
+    font-size: 1.5rem;
+}
+
+/* 大屏幕直接显示颜色选择区域 */
+@media (min-width: 769px) {
+    .hamburger-menu {
+        display: none; /* 隐藏汉堡菜单按钮 */
+    }
+
+    .colorChoose {
+        display: flex; /* 直接显示颜色选择区域 */
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .colorChoose.hidden {
+        display: flex !important; /* 强制显示 */
+    }
+}
+
+/* 小屏幕使用汉堡菜单 */
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: block;
+        cursor: pointer;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .colorChoose {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: var(--bg-color);
+        padding: 20px;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+        transform: translateY(100%);
+        transition: transform 0.3s ease;
+    }
+
+    .colorChoose.show {
+        transform: translateY(0);
+    }
+}
