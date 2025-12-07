@@ -5,7 +5,7 @@
     justify-content: space-between;
 }
 
-.colorChoose > div {
+.colorChoose>div {
     height: 100%;
     flex: 1;
     display: flex;
@@ -15,259 +15,131 @@
     gap: 10px;
 }
 
-.colorChoose > .text {
+.colorChoose>.text {
     font-size: 18px;
 }
 
-.colorChoose > .color > div {
+.colorChoose>.color>div{
     width: 45%;
     aspect-ratio: 1/1;
     border-radius: 50%;
     cursor: pointer;
 }
 
-.colorChoose > .blue > div {
+.colorChoose>.blue>div{
     background-color: #66a3f4;
 }
 
-.colorChoose > .green > div {
+.colorChoose>.green>div{
     background-color: #89b566;
 }
 
-.colorChoose > .purple > div {
+.colorChoose>.purple>div{
     background-color: #9270CA;
 }
 
-.colorChoose > .red > div {
+.colorChoose>.red>div{
     background-color: #E6450F;
 }
 
-.colorChoose > .pink > div {
+.colorChoose>.pink>div{
     background-color: #ff99b1;
 }
 
-.colorChoose > .orange > div {
+.colorChoose>.orange>div{
     background-color: #FF963E;
 }
 
-.bg.blue {
+.bg.blue{
     background-image: linear-gradient(45deg, #66a3f4, #accbee, #e7f0fd);
 }
 
-.bg.green {
+.bg.green{
     background-image: linear-gradient(45deg, #80a860, #abc88b, #e3fec7);
 }
 
-.bg.purple {
-    background-image: linear-gradient(45deg, #9270CA, #c6b1f0, #f0e1ff);
+.bg.purple{
+    background-image: linear-gradient(45deg, #9270CA, #c6b1f0, #f0e1ff); 
 }
 
-.bg.red {
-    background-image: linear-gradient(45deg, #E6450F, #f0a88b, #ffeae1);
+.bg.red{
+    background-image: linear-gradient(45deg, #E6450F, #f0a88b, #ffeae1); 
 }
 
-.bg.pink {
-    background-image: linear-gradient(45deg, #ff99b1, #ffc3d8, #ffebef);
+.bg.pink{
+    background-image: linear-gradient(45deg, #ff99b1, #ffc3d8, #ffebef); 
 }
 
-.bg.orange {
-    background-image: linear-gradient(45deg, #FF963E, #FFC396, #ffebdc);
+.bg.orange{
+    background-image: linear-gradient(45deg, #FF963E, #FFC396, #ffebdc); 
 }
 
-.lyrics > .blue {
+.lyrics>.blue {
     background: linear-gradient(to left,
-    white, #e7f0fd, #accbee, #75aef8,
-    white, #e7f0fd, #accbee, #75aef8,
-    white);
+            white,#e7f0fd,#accbee,#75aef8,
+            white,#e7f0fd,#accbee,#75aef8,
+            white);
     color: transparent;
     background-size: 200% auto;
     background-clip: text;
 }
 
-.lyrics > .green {
+.lyrics>.green {
     background: linear-gradient(to left,
-    white, #e3fec7, #abc88b, #80a860,
-    white, #e3fec7, #abc88b, #80a860,
-    white);
+            white,#e3fec7,#abc88b,#80a860,
+            white,#e3fec7,#abc88b,#80a860,
+            white); 
     color: transparent;
     background-size: 200% auto;
     background-clip: text;
 }
 
-.lyrics > .purple {
+.lyrics>.purple {
     background: linear-gradient(to left,
-    white, #f0e1ff, #c6b1f0, #9270CA,
-    white, #f0e1ff, #c6b1f0, #9270CA,
-    white);
+            white,#f0e1ff,#c6b1f0,#9270CA,
+            white,#f0e1ff,#c6b1f0,#9270CA,
+            white);
+    color: transparent;
+    background-size: 200% auto; 
+    background-clip: text;
+}
+
+.lyrics>.red {
+    background: linear-gradient(to left,
+            white,#ffeae1,#f0a88b,#E6450F,
+            white,#ffeae1,#f0a88b,#E6450F,
+            white); 
+    color: transparent;
+    background-size: 200% auto; 
+    background-clip: text;
+}
+
+.lyrics>.pink {
+    background: linear-gradient(to left,
+            white,#ffebef,#ffc3d8,#ff99b1,
+            white,#ffebef,#ffc3d8,#ff99b1,
+            white); 
     color: transparent;
     background-size: 200% auto;
     background-clip: text;
 }
 
-.lyrics > .red {
+.lyrics>.orange {
     background: linear-gradient(to left,
-    white, #ffeae1, #f0a88b, #E6450F,
-    white, #ffeae1, #f0a88b, #E6450F,
-    white);
+            white,#ffebdc,#FFC396,#FF963E,
+            white,#ffebdc,#FFC396,#FF963E,
+            white); 
     color: transparent;
     background-size: 200% auto;
     background-clip: text;
 }
 
-.lyrics > .pink {
-    background: linear-gradient(to left,
-    white, #ffebef, #ffc3d8, #ff99b1,
-    white, #ffebef, #ffc3d8, #ff99b1,
-    white);
-    color: transparent;
-    background-size: 200% auto;
-    background-clip: text;
-}
-
-.lyrics > .orange {
-    background: linear-gradient(to left,
-    white, #ffebdc, #FFC396, #FF963E,
-    white, #ffebdc, #FFC396, #FF963E,
-    white);
-    color: transparent;
-    background-size: 200% auto;
-    background-clip: text;
-}
-
-@media (max-width: 768px) {
-    .colorChoose {
-        flex-direction: column; /* 主轴变为垂直 */
-        justify-content: flex-start; /* 从顶部开始排列 */
-        align-items: center; /* 内容居中对齐 */
-        padding: 10px 5px !important; /* 调整内边距 */
-        gap: 15px; /* 设置内部元素间距 */
-    }
-
-    /* 隐藏原来的“颜色”文字标签（因为图标本身已能表达） */
-    .colorChoose > .text {
-        display: none;
-    }
-
-    /* 让.color容器（包含所有色块）充满宽度并垂直排列 */
-    .colorChoose > .color {
-        width: 100%;
-        flex-direction: column; /* 色块垂直排列 */
-        gap: 12px; /* 色块间距 */
-        justify-content: flex-start;
-    }
-
-    /* 调整每个色块的尺寸 */
-    .colorChoose > .color > div {
-        width: 60% !important; /* 色块宽度相对容器 */
-        max-width: 50px; /* 但不超过50px，防止过大 */
-        aspect-ratio: 1/1;
-    }
-}
-
-@media (max-width: 768px) {
-    /* 强制.colorChoose容器使用精确尺寸 */
-    .colorChoose {
-        width: 35% !important; /* 进一步缩窄宽度 */
-        max-width: 120px !important; /* 绝对最大宽度限制 */
-        min-width: 80px !important; /* 保持可操作性 */
-        height: auto !important;
-        padding: 8px 5px !important;
-        margin: 0 5px 0 10px !important; /* 控制与左侧间距 */
-        /* 确保布局稳定 */
-        display: flex !important;
-        flex-shrink: 0 !important; /* 禁止被挤压 */
-        position: relative !important;
-        top: 0 !important;
-        left: 0 !important;
-        align-self: center; /* 垂直居中于.bottom */
-    }
-
-    /* 重点：约束内部圆角矩形背景框 */
-    .colorChoose > .color {
-        width: 100% !important; /* 色块容器充满父级 */
-        background-color: rgba(255, 255, 255, 0.2); /* 可视化的背景框 */
-        border-radius: 15px; /* 圆角矩形 */
-        padding: 10px 5px;
-        box-sizing: border-box;
-        /* 确保内部垂直布局 */
-        display: flex !important;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    /* 缩窄每个色块 */
-    .colorChoose > .color > div {
-        width: 70% !important; /* 相对于容器宽度 */
-        max-width: 40px !important; /* 绝对最大宽度 */
-        aspect-ratio: 1/1;
-    }
-}
-
-.hamburger-menu {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    z-index: 1000;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 8px 12px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.menu-text {
-    font-size: 14px;
-    font-weight: bold;
-}
-
-.hamburger-menu i {
-    font-size: 1.5rem;
-}
-
-/* 大屏幕直接显示颜色选择区域 */
-@media (min-width: 769px) {
-    .hamburger-menu {
-        display: none; /* 隐藏汉堡菜单按钮 */
-    }
-
-    .colorChoose {
-        display: flex; /* 直接显示颜色选择区域 */
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        padding: 10px;
-    }
-
-    .colorChoose.hidden {
-        display: flex !important; /* 强制显示 */
-    }
-}
-
-/* 小屏幕使用汉堡菜单 */
-@media (max-width: 768px) {
-    .hamburger-menu {
-        display: block;
-        cursor: pointer;
-        padding: 10px;
-        text-align: center;
-    }
-
-    .colorChoose {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: var(--bg-color);
-        padding: 20px;
-        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-        transform: translateY(100%);
-        transition: transform 0.3s ease;
-    }
-
-    .colorChoose.show {
-        transform: translateY(0);
-    }
+@media (max-width: 991.98px) {
+  .colorChoose { display: none; position: fixed; top: 56px; right: 10px; z-index: 1200; width: 140px !important; padding: 8px 10px; box-sizing: border-box; border-radius: 12px; background-color: rgba(255, 255, 255, 0.95); box-shadow: -3px 3.5px 6px 0px rgba(0, 0, 0, 0.2); }
+  .colorChoose.open { display: flex; flex-direction: column; align-items: stretch; gap: 6px; }
+  .colorChoose>div { flex: initial; height: auto; }
+  .colorChoose>.text { text-align: left; font-size: 16px; }
+  .colorChoose>.color { flex-direction: row; justify-content: flex-start; align-items: center; gap: 6px; }
+  .colorChoose>.color>div{ width: 20px; }
+  .colorChoose>.color .text { text-align: left; font-size: 14px; letter-spacing: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; flex: 1; }
 }

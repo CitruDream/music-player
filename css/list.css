@@ -4,14 +4,14 @@
     position: relative;
 }
 
-.search > .fa-magnifying-glass {
+.search>.fa-magnifying-glass {
     position: absolute;
     top: 16px;
     left: 10px;
     color: rgba(0, 0, 0, 0.4);
 }
 
-.search > input {
+.search>input {
     width: 100%;
     height: 100%;
     border: none;
@@ -23,17 +23,17 @@
     letter-spacing: 1px;
 }
 
-.search > input:focus {
+.search>input:focus {
     outline: none;
     background-color: white;
 }
 
-.search > input:focus:placeholder-shown::placeholder {
+.search>input:focus:placeholder-shown::placeholder {
     color: rgba(0, 0, 0, 0.2);
 }
 
-.search > input:not(:focus)::placeholder,
-.search > input:not(:placeholder-shown)::placeholder {
+.search>input:not(:focus)::placeholder,
+.search>input:not(:placeholder-shown)::placeholder {
     color: transparent;
 }
 
@@ -50,7 +50,7 @@
     display: none;
 }
 
-.list > .song {
+.list>.song {
     width: 100%;
     height: 20%;
     color: white;
@@ -62,27 +62,27 @@
     cursor: pointer;
 }
 
-.list > .song:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+.list>.song:hover {
+    background-color: rgba(255, 255, 255, 0.1); 
 }
 
-.list > .song > img {
+.list>.song>img {
     height: 75%;
     object-fit: cover;
     margin: 0 5%;
 }
 
-.list > .song > p {
+.list>.song>p {
     width: 48%;
     cursor: pointer;
 }
 
-.list > .song > i {
+.list>.song>i {
     margin: 2%;
     transition: all 0.2s ease-in-out;
 }
 
-.list > .song > i:hover {
+.list>.song>i:hover {
     transform: translateY(-3px);
 }
 
@@ -90,6 +90,13 @@
     font-size: 18px;
 }
 
-.list .fa-pause {
+.list .fa-pause{
     font-size: 22px;
+}
+
+@media (max-width: 991.98px) {
+  .search { height: auto; min-height: 44px; width: 100%; }
+  .list { height: auto; max-height: 50vh; width: 100%; }
+  .list>.song { height: auto; min-height: 60px; }
+  .list>.song>img { height: 56px; width: 56px; }
 }
